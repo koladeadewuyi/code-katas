@@ -1,0 +1,8 @@
+
+src/main/java
+src/test/java
+src/test/scala-2.12
+src/main/scala-2.12
+.idea
+project/target/*
+project/project
