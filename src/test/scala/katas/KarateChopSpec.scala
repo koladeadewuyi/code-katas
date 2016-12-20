@@ -12,7 +12,7 @@ class KarateChopSpec extends FunSpec with Matchers {
 
   describe("chop") {
 
-    val happyCaseScenarios = Table(
+    val scenarios = Table(
       ("expectedResult", "array", "int"),
       (-1, Array(), 3),
       (-1, Array(1), 3),
@@ -35,7 +35,7 @@ class KarateChopSpec extends FunSpec with Matchers {
       (-1, Array(1, 3, 5, 7), 8)
     )
 
-    forAll(happyCaseScenarios) { (expectedResult: Int, array: Array[_ <: Int], int: Int) =>
+    forAll(scenarios) { (expectedResult: Int, array: Array[_ <: Int], int: Int) =>
       it(s"should return $expectedResult when given $int and array [${array.mkString(", ")}]") {
         chop(int, array) should equal(expectedResult)
       }
