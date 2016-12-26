@@ -3,7 +3,6 @@ package projectEuler
 /**
  * Created by koladeadewuyi@gmail.com on 26/12/2016.
  */
-// Scala
 object Problem1 {
 
   def sumOfMultiples(number: Int, divisors: List[Int]): Int = {
@@ -23,7 +22,7 @@ object Problem1 {
     } else {
       val divisor = divisors.head
       val largestMultiple = Math.floor((number - 1) / divisor).toInt
-      val sumForDivisor = (1 to largestMultiple).map { multiple => multiple * divisor }.sum
+      val sumForDivisor = largestMultiple * (divisor + (largestMultiple * divisor)) / 2
       sumIncludingDupes(number, divisors.tail, sum + sumForDivisor)
     }
   }
