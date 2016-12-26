@@ -22,7 +22,7 @@ class Problem1Spec extends FunSpec with Matchers {
     )
 
     forAll(scenarios) { (number: Int, divisors: List[Int], sum: Int) =>
-      it(s"should return $sum as the sum of multiples of ${divisors.mkString(",")} below $number") {
+      it(s"should return $sum as the sum of multiples of '${divisors.mkString(",")}' below $number") {
         sumOfMultiples(number, divisors) should equal(sum)
       }
 
