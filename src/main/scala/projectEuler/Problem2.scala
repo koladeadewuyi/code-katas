@@ -7,8 +7,8 @@ object Problem2 {
   val phi = (1 + Math.sqrt(5)) / 2
   val _phi = 1 / phi
 
-  def sumOfEvenFibonacciBelow(limit: Long): Long = {
-    getSum(limit)
+  def sumOfEvenFibonacciBelow(limit: Long): Unit = {
+    println(getSum(limit))
   }
 
   private def getSum(limit: Long, sum: Long = 0l, number: Long = 0l, index: Int = 3): Long = {
