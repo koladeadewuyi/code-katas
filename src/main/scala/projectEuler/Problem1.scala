@@ -1,5 +1,7 @@
 package projectEuler
 
+import scala.annotation.tailrec
+
 /**
  * Created by koladeadewuyi@gmail.com on 26/12/2016.
  */
@@ -16,6 +18,7 @@ object Problem1 {
     sumIncludingDupes(number, List(divisors.product))
   }
 
+  @tailrec
   def sumIncludingDupes(number: Int, divisors: List[Int], sum: Int = 0): Int = {
     if (divisors.isEmpty) {
        sum

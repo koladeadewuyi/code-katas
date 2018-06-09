@@ -1,7 +1,10 @@
 package projectEuler
 
+import scala.annotation.tailrec
+
 object Problem9 {
 
+  @tailrec
   def specialPythagoreanTriplet(sum: Int, m: Int): (Int, Int, Int) = {
     if (m <= 1) (0, 0, 0)
     else {

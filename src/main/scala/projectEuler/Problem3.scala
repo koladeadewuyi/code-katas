@@ -1,5 +1,7 @@
 package projectEuler
 
+import scala.annotation.tailrec
+
 /**
  * Created by koladeadewuyi@gmail.com on 26/12/2016.
  */
@@ -12,6 +14,7 @@ object Problem3 {
     result
   }
 
+  @tailrec
   private def compute(number: Long, factor: Long = 1l, divisor: Int = 1): Long = {
     if (divisor > number / 2) number
     else if (factor != number && (factor * divisor <= number) && isPrime(factor)) factor
