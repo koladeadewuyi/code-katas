@@ -4,7 +4,6 @@ import scala.annotation.tailrec
 
 object CountOccurrenceOfItemInArray {
 
-
   /** Counts the number of times an item occurs in an array. Time complexity: O(n), space complexity: N
     *
     * @param array array of elements containing item to be counted
