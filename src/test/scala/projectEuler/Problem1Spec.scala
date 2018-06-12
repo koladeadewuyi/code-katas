@@ -13,13 +13,12 @@ class Problem1Spec extends FunSpec with Matchers {
 
     val scenarios = Table(
       ("number", "divisors", "sum of multiples of divisors"),
-//      (10, List(3, 5), 23),
-      (1000, List(3, 5), 233168)
-//      ,
-//      (1000, List.empty, 0),
-//      (0, List(3, 5), 0),
-//      (-100, List(3, 5), 0),
-//      (-100, List.empty, 0)
+      (10, List(3, 5), 23),
+      (1000, List(3, 5), 233168),
+      (1000, List.empty, 0),
+      (0, List(3, 5), 0),
+      (-100, List(3, 5), 0),
+      (-100, List.empty, 0)
     )
 
     forAll(scenarios) { (number: Int, divisors: List[Int], sum: Int) =>
