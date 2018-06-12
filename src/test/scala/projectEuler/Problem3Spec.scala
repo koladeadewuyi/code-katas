@@ -19,7 +19,7 @@ class Problem3Spec extends FunSpec with Matchers {
       (700600851475143l, 8052883350289l)
     )
 
-    forAll(scenarios) { (number: Long, expected: Long) =>
+    forAll(scenarios) { (number, expected) =>
       it(s"should return $expected as the largest prime factor of $number") {
         largestPrimeFactor(number) should equal(expected)
       }
