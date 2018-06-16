@@ -7,6 +7,7 @@ import scala.annotation.tailrec
 object Problem4 {
 
   def hasCycle(list: List[Int]): IsTrue.Value = {
+    require(list.size >= 0 && list.size <= 100)
     checkFoCycle(list.toVector)
   }
 

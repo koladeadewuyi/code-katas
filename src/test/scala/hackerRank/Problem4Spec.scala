@@ -12,6 +12,8 @@ class Problem4Spec extends TestFixture {
 
       val scenarios = Table(
         ("list", "containsCycle"),
+        (List.empty, No),
+        (List(2), No),
         (List(1, 2, 3, 4), No),
         (List(1, 2, 3, 4, 1), Yes),
         (List(3, 7, 1, 4, 7, 9), Yes)
