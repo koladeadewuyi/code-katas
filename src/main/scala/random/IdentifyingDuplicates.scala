@@ -5,11 +5,11 @@ import scala.collection.immutable.SortedSet
 
 object IdentifyingDuplicates {
 
-  /**
+  /** This method find the duplicate integers in a list of integers
     *
-    * @param listOfNumbers
-    * @param seenItems
-    * @param duplicates
+    * @param listOfNumbers the list of integers in which to find duplicates
+    * @param seenItems a set of the items in the list which have been seen
+    * @param duplicates a set of the duplicate items in the list
     * @return
     */
   @tailrec
