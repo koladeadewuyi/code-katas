@@ -9,12 +9,14 @@ class PermutationSpec extends TestFixture {
 
     val scenarios = Table(
       ("n", "r", "result"),
+      (3, 1, 3),
+      (5, 2, 20),
       (10, 4, 5040)
     )
 
     forAll(scenarios) { (n, r, result) =>
       it(s"should return $result when n = $n and r = $r") {
-        permutation(n, n - r) shouldBe result
+        permutation(n, r) shouldBe result
       }
     }
   }
