@@ -1,10 +1,13 @@
 package random
 
+import scala.annotation.tailrec
+
 object Combination {
   def combination(n: Int, r: Int): Int = {
     compute(n, n - r, r)
   }
 
+  @tailrec
   private def compute(n: Int, c: Int, r: Int, nFac: Int = 1, cFac: Int = 1, rFac: Int = 1): Int = {
     (n, c, r) match {
       case (0, 0, 0) => nFac / (cFac * rFac)
