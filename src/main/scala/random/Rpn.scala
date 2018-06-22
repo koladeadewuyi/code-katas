@@ -1,5 +1,7 @@
 package random
 
+import scala.annotation.tailrec
+
 object Rpn {
 
   val unaryOperator = "++"
@@ -10,6 +12,7 @@ object Rpn {
     generate(inputs)
   }
 
+  @tailrec
   private def generate(inputs: Vector[String], expressions: Vector[String] = Vector.empty): String = {
     if (inputs.isEmpty) s"${expressions.head}"
     else {
