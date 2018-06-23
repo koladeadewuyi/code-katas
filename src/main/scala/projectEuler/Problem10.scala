@@ -18,7 +18,7 @@ object Problem10 {
   }
 
   private def isNotPrime(number: Int, primes: Seq[Int]): Boolean = {
-    primes.par.exists(prime => number % prime == 0)
+    primes.exists(prime => number % prime == 0)
   }
 
 }
