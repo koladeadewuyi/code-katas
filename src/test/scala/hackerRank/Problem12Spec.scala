@@ -15,7 +15,8 @@ class Problem12Spec extends TestFixture {
         (4, 3),
         (5, 5),
         (6, 8),
-        (12, 144)
+        (12, 144),
+        (100000000, 1819143227)
       )
 
       forAll(scenarios) { (index, expectedFibonacciNumber) =>
