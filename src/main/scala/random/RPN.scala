@@ -19,21 +19,19 @@ object RPN {
   private def toHPF(inputs: Vector[String], expressions: Vector[String] = Vector.empty): String = {
     if (inputs.isEmpty) s"${expressions.head}"
     else {
-      val expressionsSize = expressions.size
       inputs.head match {
         case unaryOp if unaryOperators(unaryOp) =>
-          val last = expressions.last
-          val rest = expressions.take(math.max(0, expressionsSize - 2))
-          val expression = s"($last$unaryOp)"
-          toHPF(inputs.tail, rest :+ expression)
+          val operand = expressions.head
+          val expression = s"($operand$unaryOp)"
+          toHPF(inputs.tail, expression +: expressions.tail)
         case binaryOp if binaryOperators(binaryOp) =>
-          val last = expressions.last
-          val previous = expressions(math.max(0, expressionsSize - 2))
-          val rest = expressions.take(expressionsSize - 2)
-          val expression = s"($previous$binaryOp$last)"
-          toHPF(inputs.tail, rest :+ expression)
+          val right = expressions.head
+          val tail = expressions.tail
+          val left = tail.head
+          val expression = s"($left$binaryOp$right)"
+          toHPF(inputs.tail, expression +: tail.tail)
         case number =>
-          toHPF(inputs.tail, expressions :+ number)
+          toHPF(inputs.tail, number +: expressions)
       }
     }
   }
