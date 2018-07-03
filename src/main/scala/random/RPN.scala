@@ -40,21 +40,19 @@ object RPN {
   private def evalRPN(inputs: Vector[String], expressions: Vector[Int] = Vector.empty): Int = {
     if (inputs.isEmpty) expressions.sum
     else {
-      val expressionSize = expressions.size
       inputs.head match {
         case unaryOp if unaryOperators(unaryOp) =>
-          val last = expressions.last
-          val rest = expressions.take(math.max(0, expressionSize - 2))
-          val expression = evalUnaryOp(last, unaryOp)
-          evalRPN(inputs.tail, rest :+ expression)
+          val tail = expressions.tail
+          val expression = evalUnaryOp(expressions.head, unaryOp)
+          evalRPN(inputs.tail, tail :+ expression)
         case binaryOp if binaryOperators(binaryOp) =>
-          val last = expressions.last
-          val previous = expressions(math.max(0, expressionSize - 2))
-          val rest = expressions.take(math.max(0, expressionSize - 2))
-          val expression = evalBinaryOp(previous, binaryOp, last)
-          evalRPN(inputs.tail, rest :+ expression)
+          val right = expressions.head
+          val tail = expressions.tail
+          val left = tail.head
+          val expression = evalBinaryOp(left, binaryOp, right)
+          evalRPN(inputs.tail, expression +: tail.tail)
         case number =>
-          evalRPN(inputs.tail, expressions :+ number.toInt)
+          evalRPN(inputs.tail,  number.toInt +: expressions)
       }
     }
   }
