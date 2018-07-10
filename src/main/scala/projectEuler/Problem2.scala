@@ -9,8 +9,8 @@ object Problem2 {
   val phi: Double = (1 + Math.sqrt(5)) / 2
   val inversePhi: Double = 1 / phi
 
-  def sumOfEvenFibonacciBelow(limit: Long): Unit = {
-    println(getSum(limit))
+  def sumOfEvenFibonacciBelow(limit: Long): Long = {
+    getSum(limit)
   }
 
   @tailrec

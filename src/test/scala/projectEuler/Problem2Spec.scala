@@ -13,9 +13,10 @@ class Problem2Spec extends FunSpec with Matchers {
 
     val scenarios = Table(
       ("limit", "sum of even fibonacci numbers"),
-      (10, 10),
-      (40, 44),
-      (4000000, 4613732)
+      (10L, 10),
+      (40L, 44),
+      (4000000L, 4613732),
+      (22000000000L, 26658145586L)
     )
 
     forAll(scenarios) { (limit, sum) =>
