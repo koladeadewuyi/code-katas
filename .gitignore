@@ -6,3 +6,4 @@ src/main/scala-2.12
 .idea
 target
 project/project
+.DS_Store

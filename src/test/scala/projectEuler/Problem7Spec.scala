@@ -12,7 +12,8 @@ class Problem7Spec extends FunSpec with Matchers {
     val scenarios = Table(
       ("N", "expectedNthPrimeNumber"),
       (6, 13),
-      (10001, 104743)
+      (10001, 104743),
+      (2000000, 104743)
     )
 
     forAll(scenarios) { (N: Int, expectedNthPrimeNumber: Int) =>
