@@ -1,11 +1,9 @@
 package projectEuler
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
-
 import Problem8._
+import testUtils.TestFixture
 
-class Problem8Spec extends FunSpec with Matchers {
+class Problem8Spec extends TestFixture {
 
   describe("largestProductInSeries") {
 

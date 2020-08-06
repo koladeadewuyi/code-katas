@@ -1,12 +1,11 @@
 package projectEuler
 
-import org.scalatest.prop.TableDrivenPropertyChecks._
-import org.scalatest.{FunSpec, Matchers}
 import projectEuler.Problem11._
+import testUtils.TestFixture
 
 import scala.language.implicitConversions
 
-class Problem11Spec extends FunSpec with Matchers {
+class Problem11Spec extends TestFixture {
 
   describe("LargestProductOfGrid") {
 

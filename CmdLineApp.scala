@@ -6,6 +6,7 @@ object CmdLineApp {
   def main(args: Array[String]): Unit = {
     val cmdArgs = new CmdArgs()
     val parser = new CmdLineParser(cmdArgs)
+    println(s"Args: ${args.mkString("#")}")
     parser.parseArgument(args: _*)
 
     println(s"subGenreTypeValue: ${cmdArgs.subGenreTypeValue}")

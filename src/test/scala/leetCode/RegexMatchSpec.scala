@@ -1,10 +1,9 @@
 package leetCode
 
 import RegexMatch._
-import org.scalatest.{FlatSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
+import testUtils.TestFixture
 
-class RegexMatchSpec extends FlatSpec with Matchers {
+class RegexMatchSpec extends TestFixture {
 
   val scenarios = Table(
     ("string", "pattern", "matches"),
@@ -15,9 +14,11 @@ class RegexMatchSpec extends FlatSpec with Matchers {
     ("mississippi", "mis*is*p*.", false)
   )
 
-  forAll(scenarios) { (string, pattern, matches) =>
-    "RegexMatch" should s"return $matches when applying a pattern $pattern to $string" in {
-      isMatch(string, pattern) shouldBe matches
+  describe("RegexMatch") {
+    forAll(scenarios) { (string, pattern, matches) =>
+      it(s"should return $matches when applying a pattern $pattern to $string") {
+        isMatch(string, pattern) shouldBe matches
+      }
     }
   }
 

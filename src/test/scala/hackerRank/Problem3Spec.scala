@@ -1,11 +1,10 @@
 package hackerRank
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks
 import Problem3._
+import testUtils.TestFixture
 import utils.IsTrue._
 
-class Problem3Spec extends FunSpec with Matchers with TableDrivenPropertyChecks {
+class Problem3Spec extends TestFixture {
 
   private val BlankSpace = " "
 

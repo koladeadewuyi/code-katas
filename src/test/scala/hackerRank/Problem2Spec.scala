@@ -1,10 +1,9 @@
 package hackerRank
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks
 import Problem2._
+import testUtils.TestFixture
 
-class Problem2Spec extends FunSpec with Matchers with TableDrivenPropertyChecks {
+class Problem2Spec extends TestFixture {
 
   describe("Strings: Making Anagrams") {
 

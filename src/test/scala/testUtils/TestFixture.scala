@@ -1,6 +1,7 @@
 package testUtils
 
+import org.scalatest.funspec.AnyFunSpecLike
+import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.TableDrivenPropertyChecks
-import org.scalatest.{FunSpec, Matchers}
 
-trait TestFixture extends FunSpec with Matchers with TableDrivenPropertyChecks
+trait TestFixture extends AnyFunSpecLike with Matchers with TableDrivenPropertyChecks

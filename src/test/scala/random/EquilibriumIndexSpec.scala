@@ -1,11 +1,9 @@
 package random
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
-
 import EquilibriumIndex._
+import testUtils.TestFixture
 
-class EquilibriumIndexSpec extends FunSpec with Matchers {
+class EquilibriumIndexSpec extends TestFixture {
 
   describe("getEquilibriumIndices") {
 

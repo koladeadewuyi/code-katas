@@ -1,13 +1,12 @@
 package katas
 
 import katas.DataMunging._
-import org.scalatest.prop.TableDrivenPropertyChecks._
-import org.scalatest.{FunSpec, Matchers}
+import testUtils.TestFixture
 
 /**
  * Created by koladeadewuyi@gmail.com on 18/12/2016.
  */
-class DataMungingSpec extends FunSpec with Matchers with DataFileExtractor {
+class DataMungingSpec extends TestFixture with DataFileExtractor {
 
   describe("find") {
 

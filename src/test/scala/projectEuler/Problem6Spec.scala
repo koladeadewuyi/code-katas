@@ -1,11 +1,9 @@
 package projectEuler
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
-
 import Problem6._
+import testUtils.TestFixture
 
-class Problem6Spec extends FunSpec with Matchers {
+class Problem6Spec extends TestFixture {
 
   describe("sumSquaresDifference") {
 

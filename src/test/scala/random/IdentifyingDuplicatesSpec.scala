@@ -1,12 +1,11 @@
 package random
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
 import IdentifyingDuplicates._
+import testUtils.TestFixture
 
 import scala.collection.immutable.SortedSet
 
-class IdentifyingDuplicatesSpec extends FunSpec with Matchers {
+class IdentifyingDuplicatesSpec extends TestFixture {
 
   describe("findDuplicates") {
 

@@ -1,10 +1,9 @@
 package projectEuler
 
-import org.scalatest.prop.TableDrivenPropertyChecks._
-import org.scalatest.{FunSpec, Matchers}
 import projectEuler.Problem5._
+import testUtils.TestFixture
 
-class Problem5Spec extends FunSpec with Matchers {
+class Problem5Spec extends TestFixture {
 
   describe("smallestMultiple") {
 

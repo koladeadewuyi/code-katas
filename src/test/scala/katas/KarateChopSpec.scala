@@ -5,10 +5,9 @@ package katas
  */
 
 import katas.KarateChop._
-import org.scalatest.prop.TableDrivenPropertyChecks._
-import org.scalatest.{FunSpec, Matchers}
+import testUtils.TestFixture
 
-class KarateChopSpec extends FunSpec with Matchers {
+class KarateChopSpec extends TestFixture {
 
   describe("chop") {
 

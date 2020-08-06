@@ -1,10 +1,9 @@
 package projectEuler
 
-import org.scalatest.prop.TableDrivenPropertyChecks
-import org.scalatest.{FunSpec, Matchers}
 import Problem10._
+import testUtils.TestFixture
 
-class Problem10Spec extends FunSpec with Matchers with TableDrivenPropertyChecks {
+class Problem10Spec extends TestFixture {
 
   describe("sumOfPrimes") {
 

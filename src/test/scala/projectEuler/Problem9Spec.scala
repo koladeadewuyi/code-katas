@@ -1,11 +1,9 @@
 package projectEuler
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
-
 import Problem9._
+import testUtils.TestFixture
 
-class Problem9Spec extends FunSpec with Matchers {
+class Problem9Spec extends TestFixture {
 
   describe("specialPythagoreanTriplet") {
 

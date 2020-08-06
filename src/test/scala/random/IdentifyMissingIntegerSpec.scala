@@ -1,12 +1,11 @@
 package random
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
 import IdentifyMissingInteger._
+import testUtils.TestFixture
 
 import scala.collection.immutable.SortedSet
 
-class IdentifyMissingIntegerSpec extends FunSpec with Matchers {
+class IdentifyMissingIntegerSpec extends TestFixture {
 
   describe("getMissingInteger") {
 

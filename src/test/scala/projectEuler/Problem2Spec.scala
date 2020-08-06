@@ -1,13 +1,12 @@
 package projectEuler
 
 import projectEuler.Problem2._
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
+import testUtils.TestFixture
 
 /**
  * Created by koladeadewuyi@gmail.com on 26/12/2016.
  */
-class Problem2Spec extends FunSpec with Matchers {
+class Problem2Spec extends TestFixture {
 
   describe("sumOfEvenFibonacciBelow") {
 

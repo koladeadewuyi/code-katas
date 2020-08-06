@@ -1,10 +1,9 @@
 package random
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks
 import ClosestCommonManager._
+import testUtils.TestFixture
 
-class ClosestCommonManagerSpec extends FunSpec with Matchers with TableDrivenPropertyChecks {
+class ClosestCommonManagerSpec extends TestFixture {
 
   describe("closestCommonManager") {
 

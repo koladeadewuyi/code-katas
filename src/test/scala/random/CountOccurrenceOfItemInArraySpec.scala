@@ -1,11 +1,9 @@
 package random
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
-
 import random.CountOccurrenceOfItemInArray._
+import testUtils.TestFixture
 
-class CountOccurrenceOfItemInArraySpec extends FunSpec with Matchers {
+class CountOccurrenceOfItemInArraySpec extends TestFixture {
 
   describe("countOccurrenceOfItem") {
 

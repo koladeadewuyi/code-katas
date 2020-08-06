@@ -1,13 +1,12 @@
 package projectEuler
 
 import projectEuler.Problem1._
-import org.scalatest.{Matchers, FunSpec}
-import org.scalatest.prop.TableDrivenPropertyChecks._
+import testUtils.TestFixture
 
 /**
  * Created by koladeadewuyi@gmail.com on 26/12/2016.
  */
-class Problem1Spec extends FunSpec with Matchers {
+class Problem1Spec extends TestFixture {
 
   describe("sumOfMultiples") {
 

@@ -1,10 +1,9 @@
 package hackerRank
 
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks
 import Problem1._
+import testUtils.TestFixture
 
-class Problem1Spec extends FunSpec with Matchers with TableDrivenPropertyChecks {
+class Problem1Spec extends TestFixture {
 
   describe("Arrays: Left Rotation") {
 

@@ -1,10 +1,9 @@
 package leetCode
 
 import leetCode.MedianOfSortedArrays._
-import org.scalatest.prop.TableDrivenPropertyChecks._
-import org.scalatest.{FunSpec, Matchers}
+import testUtils.TestFixture
 
-class MedianOfSortedArraysSpec extends FunSpec with Matchers {
+class MedianOfSortedArraysSpec extends TestFixture {
 
   describe("MedianOfSortedArrays") {
 

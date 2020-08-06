@@ -1,10 +1,9 @@
 package projectEuler
 
 import projectEuler.Problem4._
-import org.scalatest.{FunSpec, Matchers}
-import org.scalatest.prop.TableDrivenPropertyChecks._
+import testUtils.TestFixture
 
-class Problem4Spec extends FunSpec with Matchers {
+class Problem4Spec extends TestFixture{
 
   describe("largestPalindromeProduct") {
 
